@@ -1,34 +1,37 @@
 ---
 eip: <to be assigned>
 title: <EIP title>
-author: <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName <foo@bar.com>, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
-discussions-to: <URL>
+author: Roman Pavlovskyi @rpavlovs, Igor Markelov @pycckuu, Rustam Kovhaev @rustylife, Amsul Naeem @amsul
+discussions-to: https://t.me/walletnotify
 status: Draft
-type: <Standards Track | Meta | Informational>
-category (*only required for Standard Track): <Core | Networking | Interface | ERC>
-created: <date created on, in ISO 8601 (yyyy-mm-dd) format>
-requires (*optional): <EIP number(s)>
-replaces (*optional): <EIP number(s)>
+type: Standards Track
+category: ERC
+created: 2019-11-10
 ---
 
 <!--You can leave these HTML comments in your merged EIP and delete the visible duplicate text guides, they will not appear and may be helpful to refer to if you edit it again. This is the suggested template for new EIPs. Note that an EIP number will be assigned by an editor. When opening a pull request to submit your EIP, please use an abbreviated title in the filename, `eip-draft_title_abbrev.md`. The title should be 44 characters or less.-->
-This is the suggested template for new EIPs.
-
-Note that an EIP number will be assigned by an editor. When opening a pull request to submit your EIP, please use an abbreviated title in the filename, `eip-draft_title_abbrev.md`.
-
-The title should be 44 characters or less.
+<!--This is the suggested template for new EIPs.
 
 ## Simple Summary
 <!--"If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the EIP.-->
-If you can't explain it simply, you don't understand it well enough." Provide a simplified and layman-accessible explanation of the EIP.
+A standardized way of sending push notifications to Ethereum wallets.
 
 ## Abstract
 <!--A short (~200 word) description of the technical issue being addressed.-->
-A short (~200 word) description of the technical issue being addressed.
+Put rich-text notifications in transaction data for an Ethereum address and have wallets display them as notifications and even turn into the desktop, iOS, and Android push notifications.
+
+Just follow the standard and it will work with any modern wallet.
 
 ## Motivation
 <!--The motivation is critical for EIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the EIP solves. EIP submissions without sufficient motivation may be rejected outright.-->
-The motivation is critical for EIPs that want to change the Ethereum protocol. It should clearly explain why the existing protocol specification is inadequate to address the problem that the EIP solves. EIP submissions without sufficient motivation may be rejected outright.
+Notifications for wallets are long needed:
+
+DeFi
+- Margin trading apps need a way to notify users when positions are about to be liquidated.
+- Decentralized lending platforms need a way to notify users when debt positions are about to be closed.
+ENS needs a way to notify users when domains are about to expire.
+DAOStack, Aragon and Colony need a way to notify users when voting periods start or about to end.
+Upgradability mechanisms need ways to notify users of upcoming updates.
 
 ## Specification
 <!--The technical specification should describe the syntax and semantics of any new feature. The specification should be detailed enough to allow competing, interoperable implementations for any of the current Ethereum platforms (go-ethereum, parity, cpp-ethereum, ethereumj, ethereumjs, and [others](https://github.com/ethereum/wiki/wiki/Clients)).-->
